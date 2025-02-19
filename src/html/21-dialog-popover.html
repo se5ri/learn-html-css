@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dialog 요소, popover 요소</title>
+    <style>
+      dialog.pannel-dialog::backdrop {
+        background: linear-gradient(to bottom right, #ffdee9, #b5fffc);
+      }
+    </style>
+    <script type="module">
+      // DOM 선택 부분
+      const showDialogButton = document.querySelector('.show-dialog');
+      const closeDialogButton = document.querySelector('.close-dialog');
+      const dialog = document.querySelector('.pannel-dialog');
+
+      // 함수 구현 부분
+      const showDialog = () => dialog.showModal();
+      const closeDialog = () => dialog.close();
+
+      // 이벤트 바인딩 부분
+      showDialogButton.addEventListener('click', showDialog);
+      closeDialogButton.addEventListener('click', closeDialog);
+    </script>
+  </head>
+  <body>
+    <h1>dialog 요소, popover 요소</h1>
+    <!-- Modal window (모달창) -->
+    <div class="dialog-area">
+      <button type="button" class="show-dialog">모달창 보기</button>
+      <dialog class="pannel-dialog" aria-labelledby="evevnt">
+        <h2 id="event">깜짝 혜택</h2>
+        <p>모달창 내용</p>
+        <button type="button" class="close-dialog">닫기</button>
+      </dialog>
+    </div>
+    <hr />
+    <h1>popover 속성</h1>
+    <button type="button" popovertarget="popoverContent" class="button-popover">
+      팝오버 보기
+    </button>
+    <div popover id="popoverContent">
+      <p>팝오버 내용</p>
+    </div>
+  </body>
+</html>
