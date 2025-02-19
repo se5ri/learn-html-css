@@ -1,0 +1,7 @@
+/* body 요소의 배경색상 지정 */
+body {
+  background-color: powderblue;
+  color: rgba(0, 0, 255, 0.5);
+  font-family: Arial, Helvetica, sans-serif;
+  /* 앞부터 우선순위 */
+}
