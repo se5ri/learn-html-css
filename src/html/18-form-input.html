@@ -12,6 +12,7 @@
     <form action="/" method="post">
       <fieldset>
         <legend>폼 서식</legend>
+        <!-- text서식 -->
         <div>
           <label for="userName">이름</label>
           <input
@@ -21,9 +22,11 @@
             required
             aria-readonly="true"
             placeholder="예)김OO"
+            maxlength="5"
+            minlength="3"
           />
         </div>
-
+        <!-- password서식 -->
         <div>
           <label for="userPwd">비밀번호</label>
           <input
@@ -34,17 +37,59 @@
             placeholder="8자리 이상"
           />
         </div>
+        <!--search 서식  -->
         <div>
           <label for="likelionSearch">검색</label>
           <input type="search" name="likelionSearch" id="likelionSearch" />
         </div>
         <hr />
+        <!-- 이메일 서식 -->
         <div>
           <label for="userEmail">이메일</label>
-          <input type="email" name="userEmail" id="userEmail" />
+          <input type="email" name="userEmail" id="userEmail" required />
         </div>
+        <div>
+          <label for="userPhone">연락처</label>
+          <input type="email" name="userPhone" id="userPhone" required />
+        </div>
+        <!-- checkbox 서식  -->
+        <div>
+          <input type="checkbox" value="Html" name="" id="classHtml" />
+          <label for="classHtml">HTML</label>
+        </div>
+        <div>
+          <input type="checkbox" value="Css" name="" id="classCss" />
+          <label for="classCss">CSS</label>
+        </div>
+        <div>
+          <input type="checkbox" value="Js" name="" id="classJs" />
+          <label for="classJs">JS</label>
+        </div>
+        <!-- 라디오 서식 -->
+        <div>
+          <input
+            type="radio"
+            value="classRoom1"
+            checked
+            name="classRoom"
+            id="classRoom1"
+          />
+          <label for="classLikelion1">회고 1팀</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            value="classRoom2"
+            checked
+            name="classRoom"
+            id="classRoom2"
+          />
+          <label for="classLikelion2">회고 2팀</label>
+        </div>
+        <!-- 전송버튼 -->
         <!-- submit은 값을 action으로 보내는 역할을 해준다 -->
         <input type="submit" value="전송" />
+        <button type="submit">전송</button>
       </fieldset>
     </form>
   </body>
