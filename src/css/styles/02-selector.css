@@ -43,6 +43,16 @@ a[href^='https://']
 a[href$='pdf'] {
   background-color: violet;
 }
+/* 가상 요소 선택자 */
+/* before나 after은 반드시 content 요소가 있어야 된다 (인라인 박스) */
+/* cmd + a 했을 때, 안잡히면 가상요소이다. */
+h1::before {
+  content: '멋사';
+}
+
+h1::after {
+  content: '13기';
+}
 
 /* 가상 클래스 선택자 */
 /* <방문한적이 없는 링크일 때> */
