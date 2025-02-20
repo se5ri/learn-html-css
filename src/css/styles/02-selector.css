@@ -1,0 +1,67 @@
+body {
+  background-color: #ffc;
+}
+
+/* 태그 선택자 */
+p {
+  color: red;
+
+  &:hover {
+    background-color: skyblue;
+  }
+  /* p요소는 focus를 못받음  */
+  &:focus {
+    border: 10px solid red;
+  }
+}
+
+/* 클래스 선택자 (class="like") */
+/* [class="like"] {
+  color: green;
+} */
+.like {
+  color: green;
+}
+
+/* 아이디 선택자 (id = "like") */
+/* [id = "like"]{
+  color: blue;
+} */
+#lion {
+  color: blue;
+}
+
+/* 속성 선택자 */
+[title] {
+  color: purple;
+}
+
+a[href^='https://']
+{
+  text-decoration: none;
+}
+a[href$='pdf'] {
+  background-color: violet;
+}
+
+/* 가상 클래스 선택자 */
+/* <방문한적이 없는 링크일 때> */
+a:link {
+  color: black;
+}
+/* <방문한적이 있는 링크일 때> */
+a:visited {
+  color: olive;
+}
+/* <마우스가 텍스트 위에 있을 때> */
+a:hover {
+  color: blue;
+}
+/* <키보드 포커스를 받는 순간> */
+a:focus {
+  color: aqua;
+}
+/* <클릭하는 순간> */
+a:active {
+  background-color: #fff;
+}
