@@ -1,0 +1,38 @@
+/* CSS 박스모델 */
+/* 박스의 테두리 설정 */
+/* 크기 width+padding*4+border*4+margin=150+80+20+50=300 */
+.like {
+  box-sizing: border-box;
+  border: 5px solid green;
+  padding: 20px;
+  width: 150px;
+  margin: 50px;
+
+  div{
+    background-color: yellow;
+  }
+}
+
+.bootcamp{
+  border: 1px solid purple;
+  padding: 0 100px;
+}
+
+/* width, height 속성으로 크기 지정 */
+/* inline일 경우 width가 적용X  */
+/* inline-block, block일 경우 width가 적용O  */
+.lion {
+  display: block;
+  border: 5px solid red;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.teacher {
+  margin-bottom: 50px;
+  width: 300px;
+  /* 좌우를 한번에 줄 때
+  margin-inline: auto;*/
+  /* auto가 무너지고 왼쪽으로 당겨짐  */
+  margin-left: -50px;  
+}

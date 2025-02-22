@@ -1,0 +1,37 @@
+/* 전체선택자 */
+/* *{margin: 0;} */
+/* body안의 전체 선택자 */
+body *{margin: 0;}
+body {
+  color: olive;
+  margin: 0;
+}
+/* user agent stylesheet을 덮어쓰는 작업 */
+/* 1em=16px */
+h1 {
+  font-size: 1em;
+}
+/* 우선 순위는 나중에 선언한게 우선한다 */
+.ai {
+  background-color: orange !important;
+}
+body h2 + p {
+  background-color: yellow;
+}
+body p[class] {
+  background-color: lime;
+}
+#ai {
+  background-color: pink;
+}
+/* 단축표기법 */
+/* .ai {
+  border: 10px dotted blue;
+} */
+.ai.copilot {
+  border: 10px dotted blue;
+}
+/* 부모로부터 상속받은 값을 쓸꺼야 */
+a {
+  color: inherit;
+}

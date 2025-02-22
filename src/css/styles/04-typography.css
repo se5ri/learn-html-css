@@ -1,0 +1,49 @@
+/* font-family 속성-글꼴 */
+/* 루트 요소 */
+:root {
+  font-size: clamp(12px, 3vw.24px);
+}
+
+body {
+  font-family: 'SUIT', sans-serif;
+  font-weight: 400;
+  /* 14px rem은 root를 기준으로 돌아간다*/
+  font-size: 1.25rem;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+div {
+  font-size: 1.5em;
+}
+/* 로컬 폰트 안쓰는거 추천<사용자 컴퓨터에 깔려있어야 사용가능> */
+/* body {
+  font-family:
+    Times New Roman,
+    Trebuchet MS,
+    serif;
+} */
+
+/* p {
+  font-family: '맑은 고딕', '돋움', sans-serif;
+} */
+/* font-size 속성 - 글자크기,굵기, 기울임꼴 */
+.size {
+  color: green;
+  font-size: 20px;
+  /* 즐높이, 글자값이 있으면 글자값에 계산, 없으면 상속받은 글자값에 계산 */
+  line-height: 150%;
+  font-weight: 300;
+  font-style: italic;
+
+  font-variant: small-caps;
+  font: 'pretended variable', sans-serif;
+
+  /* font는 크기와 글꼴이 필수 */
+  /* font: 24px 'pretendard variable'; */
+}
+
+/* 단위  */
