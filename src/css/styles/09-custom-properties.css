@@ -85,9 +85,25 @@
   color: var(--text-color);
 
   .parent {
-    --text-color:blue;
+    --text-color: blue;
     .child {
       color: var(--text-color);
+    }
+  }
+}
+.lion {
+  border: 1px solid green;
+  padding: 0.5em;
+  .parent {
+    padding: inherit;
+    margin: 0;
+
+    .child {
+      color: black;
+      border: inherit;
+      border-color: blue;
+      border: 1px solid blue;
+      display: inline-block;
     }
   }
 }
