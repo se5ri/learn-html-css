@@ -16,56 +16,56 @@ li {
   padding-left: 0;
 }
 
-body{
+body {
   font-family: 'SUIT', sans-serif;
 }
 
 /* 멤버 서비스 */
-.member-service{
+.member-service {
   background: yellow;
   display: flow-root;
 
-  a{
+  a {
     background: lime;
     float: left;
     text-transform: uppercase;
   }
 
-  a:nth-child(n+2)::before{
+  a:nth-child(n + 2)::before {
     content: '|';
     margin: 0 0.5em;
   }
 
-  &::after{
+  &::after {
     display: block;
     content: '';
     clear: both;
   }
 }
 
-hr{
+hr {
   clear: both;
 }
 
 /* 멤버 링크 */
-.member-link{
+.member-link {
   margin-top: 100px;
   /* 양쪽(left, right) 모두 float된 요소 아래로 내려감 */
   clear: both;
   /* border: 1px solid red; */
   display: flow-root;
 
-  li{
+  li {
     /* background: skyblue; */
     float: left;
 
-    span{
+    span {
       /* background: pink; */
       float: left;
       margin: 0 0.5em;
     }
 
-    a{
+    a {
       /* background: orange; */
       float: left;
       text-transform: uppercase;
