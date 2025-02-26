@@ -1,0 +1,28 @@
+@import '/src/common/best-reset.css';
+@import '/src/common/a11y.css';
+
+/* 기본적으로 적용될 배경색 */
+body {
+  background: blue;
+}
+
+/* 뷰포트(600px) 크기에 따라 적용될 배경색 */
+@media (min-width: 600px) {
+  body {
+    background: pink;
+  }
+}
+
+/* 뷰포트(1000px) 크기에 따라 적용될 배경색 */
+@media (min-width: 1000px) {
+  body {
+    background: lime;
+  }
+}
+
+/* 가로 보기모드 */
+@media (orientation: landscape) {
+  body {
+    background-color: orange;
+  }
+}
