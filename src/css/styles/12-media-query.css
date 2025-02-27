@@ -19,8 +19,8 @@ body {
 }
 
 /* 가로 보기모드 */
-@media (orientation: landscape) {
+/* @media (orientation: landscape) {
   body {
     background-color: orange;
   }
-}
+} */

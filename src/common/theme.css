@@ -21,7 +21,3 @@
   --pastel-apricot: #fdd5b1; /* 파스텔 애프리콧 */
   --pastel-ivory: #fffff0; /* 파스텔 아이보리 */
 }
-
-body{
-  color: var(--pastel-coral);
-}
