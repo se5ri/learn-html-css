@@ -1,6 +1,7 @@
 @import '/src/common/theme.css';
 
-html,body{
+html,
+body {
   font-family: 'SUIT', sans-serif;
 }
 
@@ -11,16 +12,16 @@ body *::after {
 }
 
 /* flex 파헤치기 */
-
+/* 플렉스 컨테이너 관련 속성 */
 .case-01 {
   display: flex;
- /* flex-direction: row;
+  /* flex-direction: row;
   flex-wrap: nowrap; */
   /* flex-direction 속성과 flex-wrap 속성을 단축해서 지정할 때 */
   border: 1px solid red;
   /* padding: 10px; */
   inline-size: 622px;
-  block-size: 522px; 
+  block-size: 522px;
   /* row일때, row-reverse차이 알아야 함 */
   flex-flow: row wrap;
   /* 메인축 정렬 */
@@ -28,7 +29,7 @@ body *::after {
   align-items: center;
   align-content: center;
   /* row-gap, column-gap을 함께 지정할 수 있는 단축 속성 */
-  gap: 20px 40px; 
+  gap: 20px 40px;
 
   [class*='item'] {
     /* margin-block: 10px; */
@@ -45,9 +46,38 @@ body *::after {
   .item1 {
     /* inline-size: 200px;*/
     font-size: 48px;
-  } 
+  }
 
   .item2 {
     font-size: 30px;
+  }
+}
+
+/* 플렉스 아이템 관련 속성 */
+.case-02 {
+  border: 1px solid green;
+  width: 502px;
+  inline-size: 502px;
+  display: flex;
+  flex-flow: row nowrap;
+
+  [class^='item'] {
+    border: 1px solid currentColor;
+    /* width: 100px;
+    inline-size: 100px;
+    height: 100px;
+    block-size: 100px; */
+    text-align: center;
+    align-content: center;
+    /* flex-basis: 200px;
+    flex-shrink: 1;
+    flex-grow: 0; */
+    /* flex-grow, flex-shrink, flex-basis속성으로 단축표기 */
+    flex: 0 1 150px
+  }
+
+  &:nth-child(even) {
+    order: -1;
+    /* flex-grow: 2; */
   }
 }
