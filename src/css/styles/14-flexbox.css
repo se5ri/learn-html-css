@@ -1,0 +1,16 @@
+@import '/src/common/theme.css';
+/* flex 파헤치기 */
+
+.case-01 {
+  display: flex;
+  
+  [class*='item'] {
+    background:var(--pastel-yellow);
+    inline-size: 100px;
+    block-size: 100px;
+    text-align: center;
+    align-content: center;
+    /* 기존에 세로 기준 가운데 정렬을 지원하지 않을 때 사용하던 트릭 */
+    /* line-height: 100px; */
+  }
+}
