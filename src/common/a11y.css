@@ -1,4 +1,7 @@
-.sr-only{
+@import '/src/common/login-theme.css';
+
+/* 스크린리더 사용자를 위한 클래스 (화면에는 보이지 않지만 스크린 리더 사용자는 접근해서 읽을 수 있음 */
+.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -8,4 +11,14 @@
   clip-path: inset(50%);
   white-space: nowrap;
   border: 0;
+}
+
+/* 기본 focus 스타일링 */
+*:focus {
+  outline: 0;
+}
+
+*:focus-visible {
+  box-shadow: 0 0 0 1px var(--green-700);
+  border-radius: var(--rounded-xs);
 }
