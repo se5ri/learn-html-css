@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력 서식 컴포넌트</title>
     <link
       rel="shortcut icon"
       href="/src/assets/favicon/likelion.ico"
@@ -10,13 +11,15 @@
     />
     <link rel="icon" href="/src/assets/favicon/likelion.svg" />
     <link
+      rel="preload"
+      as="font"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT-Regular.woff2"
+    />
+    <link
       rel="stylesheet"
-      as="style"
-      crossorigin
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css"
     />
     <link rel="stylesheet" href="/src/ui/components/input/input.css" />
-    <title></title>
   </head>
   <body>
     <div class="components-container">
@@ -24,14 +27,38 @@
       <form action="/" method="post">
         <fieldset>
           <legend class="sr-only">입력 서식</legend>
+          <div class="input show-label">
+            <label class="input__label" for="input-0">비밀번호</label>
+            <input
+              class="input__input"
+              type="password"
+              pattern="(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_]).{8,}"
+              id="input-0"
+              name="input-0"
+              required
+              placeholder="영문 소문자, 숫자, 특수문자 포함 최소 8자리 이상"
+              aria-errormessage="error-message-0"
+            />
+            <p
+              class="input__error-message"
+              id="error-message-0"
+              aria-live="polite"
+            >
+              <span
+                >비밀번호는 영문 소문자, 숫자, 특수문자 포함 최소 8자리 이상
+                입력해야 합니다.</span
+              >
+            </p>
+          </div>
           <!-- 입력 서식 컴포넌트 (input) : 레이블 유형 -->
           <div class="input show-label">
             <label class="input__label" for="input-1">레이블</label>
             <input
               class="input__input"
+              pattern="^(?!.*.{12}).*$"
               type="email"
-              name="input-1"
               id="input-1"
+              name="input-1"
               required
               placeholder="플레이스 홀더 텍스트"
               aria-errormessage="error-message-1"
@@ -51,8 +78,8 @@
               readonly
               value="읽기 전용"
               type="email"
-              name="input-2"
               id="input-2"
+              name="input-2"
               required
               placeholder="플레이스 홀더 텍스트"
               aria-errormessage="error-message-2"
@@ -72,8 +99,8 @@
               disabled
               value="비 활성화"
               type="email"
-              name="input-3"
               id="input-3"
+              name="input-3"
               required
               placeholder="플레이스 홀더 텍스트"
               aria-errormessage="error-message-3"
@@ -95,8 +122,8 @@
             <input
               class="input__input"
               type="email"
-              name="input-4"
               id="input-4"
+              name="input-4"
               required
               placeholder="플레이스 홀더 텍스트"
               aria-errormessage="error-message-4"
@@ -116,8 +143,8 @@
               readonly
               value="읽기 전용"
               type="email"
-              name="input-5"
               id="input-5"
+              name="input-5"
               required
               placeholder="플레이스 홀더 텍스트"
               aria-errormessage="error-message-5"
@@ -137,8 +164,8 @@
               disabled
               value="비 활성화"
               type="email"
-              name="input-6"
               id="input-6"
+              name="input-6"
               required
               placeholder="플레이스 홀더 텍스트"
               aria-errormessage="error-message-6"
@@ -158,8 +185,8 @@
             <input
               class="input__input"
               type="email"
-              name="input-7"
               id="input-7"
+              name="input-7"
               placeholder="플레이스 홀더 텍스트"
               required
               aria-errormessage="error-message-7"
@@ -179,8 +206,8 @@
               readonly
               value="읽기 전용"
               type="email"
-              name="input-8"
               id="input-8"
+              name="input-8"
               placeholder="플레이스 홀더 텍스트"
               aria-errormessage="error-message-8"
             />
@@ -199,8 +226,8 @@
               disabled
               value="비 활성화"
               type="email"
-              name="input-9"
               id="input-9"
+              name="input-9"
               required
               placeholder="플레이스 홀더 텍스트"
               aria-errormessage="error-message-9"

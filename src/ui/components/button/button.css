@@ -11,6 +11,8 @@
   --fill-color: var(--gray-900, #454545);
 
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid currentColor;
   padding: var(--spacing);
   color: var(--text-color);

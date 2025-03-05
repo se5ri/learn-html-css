@@ -1,0 +1,64 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/login-theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+@import '/src/ui/components/logo/logo.css';
+@import '/src/ui/components/input/input.css';
+@import '/src/ui/components/checkbox/checkbox.css';
+@import '/src/ui/components/text-link/text-link.css';
+@import '/src/ui/components/switch/switch.css';
+@import '/src/ui/components/button/button.css';
+
+/* 컨테이너 */
+.container {
+  /* background: yellow; */
+  padding: 0 var(--spacing-4);
+}
+
+/* 헤더 */
+.login-header {
+  padding: 4.375rem 0 2.8125rem;
+
+  @media (min-width: 768px) {
+    padding: 6.25rem 0 3.125rem;
+  }
+
+  .logo {
+    margin: 0 auto;
+  }
+}
+
+/* 로그인 폼 */
+.login-form {
+  /* background: pink; */
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: var(--spacing-5);
+
+  fieldset {
+    display: contents;
+  }
+
+  .checkbox-wrapper {
+    /* background: yellow; */
+    order: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    .text-link {
+      margin-left: auto;
+      margin-inline-start: auto;
+    }
+  }
+
+  .button {
+    margin-top: var(--spacing-3);
+    margin-block-start: var(--spacing-3);
+    height: 3.75rem;
+
+    &:focus-visible {
+      box-shadow: 0 0 0 1px var(--red-500);
+    }
+  }
+}
