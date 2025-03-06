@@ -1,0 +1,66 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/base.css';
+
+/* 헤더 */
+.header {
+  background: var(--pastel-coral);
+}
+
+/* 내비게이션 */
+.navigation {
+  background: var(--pastel-green);
+}
+
+/* 메인 콘텐츠 */
+.main {
+  background: var(--pastel-aqua);
+}
+
+/* 사이드 바 */
+.sidebar {
+  background: var(--pastel-yellow);
+}
+
+/* 푸터 */
+.footer {
+  background: var(--pastel-lavender);
+}
+
+/* 그리드를 활용한 반응형 레이아웃 */
+/* 그리드 컨테이너 */
+.container {
+  min-height: 100vh;
+  min-block-size: 100vh;
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(1rem, 1fr) [content-start] repeat(
+      12,
+      minmax(5.3125rem, 1fr)
+    )
+    [content-end] minmax(1rem, 1fr) [full-end];
+  grid-auto-flow: dense;
+
+  .header {
+    grid-column: content;
+  }
+  .navigation {
+    grid-column: full;
+    display: grid;
+    grid-template-columns: subgrid;
+
+    .menu {
+      background: var(--pastel-dark-blue);
+      grid-column: content;
+    }
+  }
+  .main {
+    grid-column: content;
+  }
+  .sidebar {
+    grid-column: content;
+  }
+  .footer {
+    grid-column: full;
+  }
+}
