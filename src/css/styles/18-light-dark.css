@@ -1,0 +1,15 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+body {
+  background: var(--pastel-coral);
+  color: #000;
+  margin: 50px;
+
+  @media (prefers-color-scheme: dark) {
+    background: var(--pastel-dark-blue);
+    color: #fff;
+  }
+}
