@@ -1,0 +1,118 @@
+/* Fade 애니메이션 */
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Shrink 애니메이션 */
+@keyframes shrink {
+  0%,
+  100% {
+    width: 100%;
+  }
+  50% {
+    width: 50%;
+  }
+}
+
+/* Bounce 애니메이션 */
+@keyframes bounce {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -20px;
+  }
+}
+
+/* Shake 애니메이션 */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0 0);
+  }
+  50% {
+    transform: translateX(-15px);
+  }
+}
+
+/* Spin Animation */
+@keyframes spin {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+/* Pulse Ainimation */
+@keyframes pulse {
+  0%,
+  100% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.1;
+  }
+}
+
+/* flip 애니메이션 */
+@keyframes flip {
+  0% {
+    transform: perspective(400px) rotateY(0);
+  }
+  100% {
+    transform: perspective(400px) rotateY(360deg);
+  }
+}
+
+/* Wobble 애니메이션 */
+@keyframes wobble {
+  0%,
+  100% {
+    transform: translateX(0%) rotate(0deg);
+  }
+  15% {
+    transform: translateX(-15px) rotate(-5deg);
+  }
+  30% {
+    transform: translateX(10px) rotate(3deg);
+  }
+  45% {
+    transform: translateX(-10px) rotate(-3deg);
+  }
+  60% {
+    transform: translateX(5px) rotate(2deg);
+  }
+  75% {
+    transform: translateX(-5px) rotate(-1deg);
+  }
+}
+
+/* Glow 애니메이션 */
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px light-dark(rgb(0 0 0 /0.5), rgb(255 255 255 /0.5));
+  }
+  50% {
+    box-shadow: 0 0 10px light-dark(rgb(0 0 0 /0.6), rgb(255 255 255 /0.6));
+  }
+}
+
+/* Neon Border 애니메이션 */
+@keyframes rotate {
+  from {
+    --rotation: 0deg;
+  }
+  to {
+    --rotation: 360deg;
+  }
+}
