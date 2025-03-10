@@ -1,0 +1,34 @@
+@layer module, state;
+
+@layer state {
+  p.alert {
+    background-color: purple;
+  }
+  p {
+    border: medium solid limegreen;
+    padding: 2em;
+  }
+}
+
+@layer module {
+  .alert {
+    border: medium solid violet;
+    color: white;
+  }
+  p {
+    padding: 1em;
+  }
+  p.alert {
+    background: red;
+  }
+}
+
+@layer {
+  p.alert {
+    background: blue;
+  }
+}
+
+p.alert {
+  background: gray;
+}
